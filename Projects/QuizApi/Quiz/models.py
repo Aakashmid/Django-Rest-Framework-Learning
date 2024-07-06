@@ -56,5 +56,5 @@ class Question(Updated):
 
 class Answer(Updated):
     question=models.ForeignKey(Question,related_name='answer',on_delete=models.DO_NOTHING)
-    answer_text=models.CharField(_("Answer Text"), max_length=250)
+    answer_text=models.CharField( max_length=250)
     is_right=models.BooleanField(default=False)
