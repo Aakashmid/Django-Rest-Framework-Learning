@@ -9,13 +9,14 @@ class QuizSerializer(serializers.ModelSerializer):
         fields=['title',]
 
 
-# class AnswerSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model=Answer
-#         fields=['answer_text']
+class AnswerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Answer
+        fields=['id','answer_text','is_right']
 
 class RandomQuestionSerializer(serializers.ModelSerializer):
-    # answer=AnswerSerializer(read_only=True)
+    # answer is related name b/w  relation of Question and Answer model
+    answer=AnswerSerializer(many=True, read_only=True)  # give fields which is included in AnswerSerializers fields
     class Meta:
         model = Question
         fields=['title','answer']

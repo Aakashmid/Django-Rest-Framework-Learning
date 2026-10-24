@@ -11,4 +11,4 @@ class SingerSerilaizer(serializers.ModelSerializer):
     sungby=SongSerilaizer(many=True,read_only=True)  # here using related name of models
     class Meta:
         model=Singer
-        fields=['id','name','gender','sungby']
+        fields=['id','name','gender','sungby']                         

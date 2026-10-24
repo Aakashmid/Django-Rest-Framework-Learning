@@ -54,7 +54,13 @@ class Question(Updated):
     is_active =models.BooleanField(_("Active status"),default=False)  # tell whether question is active or not (for quiz)
     quiz=models.ForeignKey(Quizzes,related_name='question',on_delete=models.DO_NOTHING)
 
+    def __str__(self) -> str:
+        return self.title
+
 class Answer(Updated):
-    question=models.ForeignKey(Question,related_name='answer',on_delete=models.DO_NOTHING)
+    question=models.ForeignKey(Question,related_name='answer',on_delete=models.CASCADE)
     answer_text=models.CharField( max_length=250)
     is_right=models.BooleanField(default=False)
+
+    def __str__(self) -> str:
+        return self.answer_text

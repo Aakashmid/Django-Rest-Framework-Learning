@@ -1,1 +1,57 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv/
+env/
 venv/
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+
+# Media/static files (generated, not source)
+media/
+staticfiles/
+static/
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+
+# Coverage/test reports
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+.cache
+nosetests.xml
+coverage.xml
+*.log
+
+# Node modules (if tutorials use React/Vue frontend)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Mypy / type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.pytest_cache/
+
+# Jupyter notebooks checkpoints (if tutorials include them)
+.ipynb_checkpoints/
+
